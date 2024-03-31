@@ -1,0 +1,41 @@
+@page {
+    width: 50mm;
+    height: 30mm;
+}
+.print-area {
+    height: 28mm;
+    width: 100%;
+    /* text-align: center; */
+}
+
+div.text_block {
+    width: 95%;
+    padding-left: 10px;
+    font-family: Arial, Verdana, Helvetica, sans;
+    display: flex;  /* Added flexbox for vertical stacking */
+    flex-direction: column;  /* Stack elements vertically */
+}
+
+.fragile {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.room_name {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;  
+    width: 50mm;
+}
+
+/* New rule for .text_block with .fragile */
+.text_block:has(.fragile) .room_name {
+    margin-top: 0px;  
+    font-size: 20px;
+}
+
+.description {
+    font-weight: normal;
+    font-size: 18px;
+}
